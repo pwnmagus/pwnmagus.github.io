@@ -1,17 +1,17 @@
 /* Setting for body tag */
-body{background-color: rgb(255, 255, 255); margin:0;}
+body{background-image:linear-gradient(to right, #c9b456 0%, #b96c14 100% );; margin:0;}
 
 /* Setting for <a> tag, for not showing any text decoration */
 a{text-decoration:none;}
-p{color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;}
+p{color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif;}
 h1, h2, h3, h4{
-    color: rgb(0, 0, 0); font-family: "Century Gothic";
+    color: rgb(255, 255, 255); font-family: "Century Gothic";
 }
 
 /* Setting for header */
-header{padding: 0px; background: rgb(48, 48, 48); display: flex;}
+header{padding: 0px; background: rgb(24, 24, 24); display: flex;}
 
-header>h2{margin-left: 50px; font-family: 'Century Gothic'; color: white;}
+header>h2{margin-left: 50px; font-family: 'Century Gothic'; color: white;text-shadow: 0 0 10px rgb(248, 233, 19);}
 
 /* auto-scroll up  */
 #backtop {
@@ -23,7 +23,7 @@ header>h2{margin-left: 50px; font-family: 'Century Gothic'; color: white;}
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: rgb(61, 91, 255);
+    background-color: rgb(116, 64, 5);
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -37,7 +37,7 @@ header>h2{margin-left: 50px; font-family: 'Century Gothic'; color: white;}
 
 /* Navbar */
 .navbar {
-    background-color: rgb(61, 91, 255);
+    background-color: rgba(56, 56, 56, 0.5);
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -49,17 +49,24 @@ header>h2{margin-left: 50px; font-family: 'Century Gothic'; color: white;}
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    border-bottom: 3px solid transparent;
   }
   
-  .active {
-    background-color: rgb(255, 255, 255);
-    color: rgb(61, 91, 255);
-  }
-  .inactive {
-    background-color: rgb(61, 91, 255);
-    color: rgb(255, 255, 255);
-  }
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+/* .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} */
 
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+/* .sticky + .content {
+  padding-top: 10px;
+} */
+
+  .active {color: rgb(255, 255, 255);}
+  .inactive {color: rgb(255, 255, 255);}
+  
   .navbar .icon { display: none;  }
   .dropdown { float: left;  overflow: hidden; }
   
@@ -93,8 +100,9 @@ header>h2{margin-left: 50px; font-family: 'Century Gothic'; color: white;}
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #555;
     color: white;
+    text-shadow: 0 0 10px rgb(2, 255, 200);
+    border-bottom: 3px solid rgb(2, 255, 200);
   }
   
   .dropdown-content a:hover {
@@ -107,7 +115,7 @@ header>h2{margin-left: 50px; font-family: 'Century Gothic'; color: white;}
 
   @media screen and (max-width: 800px) {
 
-    header>h2{margin-left: 125px; font-family: 'Century Gothic'; color: white;}
+    header>h2{margin-left: 125px; font-family: 'Century Gothic'; color: white; text-align: center;}
 
     .navbar a:not(:first-child), .dropdown .dropbtn {display: none;}
     .navbar a.icon { float: right;  display: block; font-size: 15px;}
@@ -126,6 +134,7 @@ header>h2{margin-left: 50px; font-family: 'Century Gothic'; color: white;}
     }
     .navbar.responsive .dropdown {float: none;}
     .navbar.responsive .dropdown-content {position: relative;}
+
   }
   
 /*Container Core  */
@@ -140,9 +149,10 @@ header>h2{margin-left: 50px; font-family: 'Century Gothic'; color: white;}
     /* Jumbotron */
     .jumbotron {
       padding: 1rem 1rem;
-      background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+      background-image: linear-gradient(to right, #8f480e 0%, #aa3e00 100%);
       color: rgb(12, 12, 12);
       font-family: Arial, Helvetica, sans-serif;
+      border-radius: 30px;
     }
     
     .jumbotron>p, .jumbotron>h3{
@@ -170,9 +180,11 @@ header>h2{margin-left: 50px; font-family: 'Century Gothic'; color: white;}
 .container-footer{
   padding-left: 20px;
   padding-right: 20px;
+  
+
 }
 
-footer>.copyright{text-align: center; font-family: 'Century Gothic';color:rgb(245, 245, 245);}
+footer>.copyright{text-align:center; font-family: 'Century Gothic';color:rgb(245, 245, 245);}
 
 /*Row and Columns*/
 .column {
